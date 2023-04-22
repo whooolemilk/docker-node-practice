@@ -1,5 +1,6 @@
 # docker-node-practice
-## 🐳 dockerでnodeの環境構築して、next.jsのwebアプリケーションを作る方法！
+
+## 🐳 docker で node の環境構築して、next.js の web アプリケーションを作る方法！
 
 1. Dockerfile を作成
 
@@ -110,5 +111,7 @@
 
 ## 💗 Special Thanks
 
-Dockerの質問なんでも答えてくれたチームメンバー：
+Docker の質問なんでも答えてくれたチームメンバー：
 [@Daaiki](https://github.com/Daaiki)
+
+自分たちの作ったものをいろんな人に届けて、新しい感動を体験して欲しい！という想いを大切に、コツコツ活動するクリエイティブチーム：[@traveli-dev(仮名)](https://github.com/traveli-dev)
