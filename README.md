@@ -1,4 +1,5 @@
 # docker-node-practice
+## 🐳 dockerでnodeの環境構築して、next.jsのwebアプリケーションを作る方法！
 
 1. Dockerfile を作成
 
@@ -9,24 +10,24 @@
 2. docker-compose.yaml を作成
 
    ```yaml
-    version: "3.9"
-    services:
-      node:
-        build:
-          context: ./front
-          dockerfile: Dockerfile
-        container_name: rsc-blog
-        ports:
-          - 3000:3000 # Next.js
-        volumes:
-          - type: bind
-            source: ./front
-            target: /home/app
+   version: "3.9"
+   services:
+     node:
+       build:
+         context: ./front
+         dockerfile: Dockerfile
+       container_name: rsc-blog
+       ports:
+         - 3000:3000 # Next.js
+       volumes:
+         - type: bind
+           source: ./front
+           target: /home/app
    ```
 
 3. `docker compose run --rm node sh`を実行し、コンテナにはいる
 
-4. `cd /home/app`を実行し、/home/app内でyarn3 の最新版の設定を行う
+4. `cd /home/app`を実行し、/home/app 内で yarn3 の最新版の設定を行う
 
    ```sh
    $ corepack enable
@@ -106,3 +107,8 @@
 - tsconfig.json 　など
 
 15. `docker compose up`で localhost:3000 が開けたら環境構築終了！
+
+## 💗 Special Thanks
+
+Dockerの質問なんでも答えてくれたチームメンバー：
+[@Daaiki](https://github.com/Daaiki)
