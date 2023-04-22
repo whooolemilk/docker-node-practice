@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  node:
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    container_name: docker-node-practice
+    ports:
+      - 3000:3000 # Next.js
+    volumes:
+      - type: bind
+        source: ./front
+        target: /home/app
+      - type: volume
+        source: node-modules-volume
+        target: /home/app/node_modules
+volumes:
+  node-modules-volume:
